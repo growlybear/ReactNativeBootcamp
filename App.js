@@ -11,10 +11,9 @@ const instructions = Platform.select({
 export default class App extends Component {
   constructor() {
     super()
-
+    this.state = {}
     console.log('constructor called')
   }
-  state = {}
   static getDerivedStateFromProps(nextProps, prevState) {
     console.log('getDerivedStateFromProps called')
     // method has to return something
