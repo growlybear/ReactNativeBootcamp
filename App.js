@@ -12,7 +12,7 @@ export default class App extends Component {
   state = {
     greeting: 'Welcome to React Native'
   }
-  updateGreeting() {
+  updateGreeting = () => {
     this.setState({
       greeting: 'New Greeting'
     })
@@ -21,7 +21,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>{this.state.greeting}</Text>
-        <Text style={styles.welcome} onPress={this.updateGreeting.bind(this)}>Update greeting</Text>
+        <Text style={styles.welcome} onPress={this.updateGreeting}>Update greeting</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
       </View>
