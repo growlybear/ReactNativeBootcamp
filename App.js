@@ -9,23 +9,13 @@ const instructions = Platform.select({
 });
 
 export default class App extends Component {
-  constructor() {
-    super()
-    this.state = {}
-    console.log('constructor called')
-  }
-  static getDerivedStateFromProps(nextProps, prevState) {
-    console.log('getDerivedStateFromProps called')
-    // method has to return something
-    return {}
-  }
-  componentDidMount() {
-    console.log('componentDidMount called')
+  state = {
+    greeting: 'Welcome to React Native'
   }
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native, Growly!</Text>
+        <Text style={styles.welcome}>{this.state.greeting}</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
       </View>
@@ -38,7 +28,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'orange',
+    backgroundColor: '#f4f4f4',
   },
   welcome: {
     fontSize: 20,
