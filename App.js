@@ -9,6 +9,19 @@ const instructions = Platform.select({
 });
 
 export default class App extends Component {
+  constructor() {
+    super()
+
+    console.log('constructor called')
+  }
+  static getDerivedStateFromProps(nextProps, prevState) {
+    console.log('getDerivedStateFromProps called')
+    // method has to return something
+    return {}
+  }
+  componentDidMount() {
+    console.log('componentDidMount called')
+  }
   render() {
     return (
       <View style={styles.container}>
