@@ -14,6 +14,7 @@ export default class App extends Component {
 
     console.log('constructor called')
   }
+  state = {}
   static getDerivedStateFromProps(nextProps, prevState) {
     console.log('getDerivedStateFromProps called')
     // method has to return something
